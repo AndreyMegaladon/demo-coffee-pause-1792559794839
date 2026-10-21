@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея — Coffee Pause</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans">
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200 h-20 flex items-center justify-between px-6 lg:px-12">
+        <a href="index.html" class="text-2xl font-bold text-stone-900 tracking-wide">Coffee Pause</a>
+        <div class="hidden md:flex items-center space-x-2">
+            <a href="index.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 font-medium transition">Головна</a>
+            <a href="about.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 font-medium transition">Про нас</a>
+            <a href="services.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 font-medium transition">Меню</a>
+            <a href="gallery.html" class="bg-amber-500 text-white rounded-lg px-4 py-2 font-medium">Галерея</a>
+            <a href="booking.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 font-medium transition">Бронювання</a>
+            <a href="contacts.html" class="hover:bg-amber-50 text-stone-700 rounded-lg px-4 py-2 font-medium transition">Контакти</a>
+        </div>
+    </nav>
+
+    <div class="bg-amber-100/50 py-4 px-6 border-b border-amber-200">
+        <div class="max-w-6xl mx-auto text-sm text-stone-600">
+            <a href="index.html" class="hover:underline">Головна</a> > <span class="text-amber-800 font-semibold">Галерея</span>
+        </div>
+    </div>
+
+    <section class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h1 class="text-4xl font-bold mb-4">Фотогалерея</h1>
+            <p class="text-stone-600">Атмосфера нашої кав'ярні та найкращі напої</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="aspect-square overflow-hidden rounded-xl shadow-md"><img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb" alt="Кав'ярня" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
+            <div class="aspect-square overflow-hidden rounded-xl shadow-md"><img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04" alt="Еспресо" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
+            <div class="aspect-square overflow-hidden rounded-xl shadow-md"><img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e" alt="Зерна" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
+            <div class="aspect-square overflow-hidden rounded-xl shadow-md"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a" alt="Десерт" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
+            <div class="aspect-square overflow-hidden rounded-xl shadow-md"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085" alt="Чашка кави" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
+            <div class="aspect-square overflow-hidden rounded-xl shadow-md"><img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="Інтер'єр" class="w-full h-full object-cover hover:scale-110 transition duration-500"></div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-300 py-12 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Coffee Pause</h3>
+                <p class="text-sm">Затишна кав’ярня та магазин кави у Кам'янці-Подільському.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Контакти</h3>
+                <p class="text-sm mb-2">Хмельницьке шосе, 38, Кам'янець-Подільський</p>
+                <p class="text-sm mb-2">Телефон: +380673812287</p>
+                <p class="text-sm">Email: coffeepausekp@gmail.com</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Графік роботи</h3>
+                <p class="text-sm mb-2">Понеділок — Неділя</p>
+                <p class="text-sm">09:00 - 17:00</p>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto border-t border-gray-800 mt-8 pt-6 text-center text-xs text-gray-500">© 2024 Coffee Pause. Усі права захищені.</div>
+    </footer>
+<script>
+    document.getElementById('mobile-toggle')?.addEventListener('click', function() {
+      document.getElementById('mobile-menu')?.classList.toggle('hidden');
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+  </script>
+</body>
+</html>
